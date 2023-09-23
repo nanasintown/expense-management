@@ -25,5 +25,7 @@ jobs:
           pip install PyQt6
       - name: Unit Testing
         run: |
+          apt-get update && apt-get install libgl1
           echo "$PWD"
-          python3 ./code/src/test.py
+          cd code/src
+          python3 test.py
